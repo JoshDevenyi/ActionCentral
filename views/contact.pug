@@ -1,0 +1,66 @@
+extends layout
+
+block layoutContent
+
+
+    div.pageHeader
+        h1.pageTitle Contact Us
+
+
+    div#contactContent.flexContainer
+
+        div#contactLeftSide
+
+            div.contactImageBox.flexContainer
+                img.contactPicture(src="/images/Batsignal.png" alt="Commissioner Gordon standing beside the batsignal")
+                //- Image Source: https://batman.fandom.com/wiki/Batsignal?file=Gordon_O%2527Hara_Bullock_Bat-Signal1.jpg
+
+        div#contactRightSide
+
+            div.contactRightFlexContainer
+
+                div#rightSideContent
+
+                    div.flexContainer#infoBox
+
+                        div#storeAddress
+                            h2 Address
+                            div#addressInfo
+                                p Action Central
+                                p 329 Yonge Street
+                                p Toronto, ON M5B 1R7
+                                p 416-555-0139
+                                a(href="https://www.google.com/maps?q=329+Yonge+Street,+Toronto,+ON,+Canada").locationLink
+                                    i.fas.fa-map-marker-alt
+
+                        div#storeHours
+                            h2 Current Hours
+                            ul
+                                li Monday: 11am - 7pm
+                                li Tuesday: 11am - 7pm
+                                li Wednesday: 11am - 8pm
+                                li Thursday: 11am - 8pm
+                                li Friday: 11am - 8pm
+                                li Saturday: 11am - 8pm
+                                li Sunday: 12pm - 6pm
+
+                    div#emailBox
+                        h2 Email Us
+                        //- form(action="#" name="emailForm" method="post")#emailForm
+                        div.flexContainer#inputFlex
+                            div.inputBox
+                                label(for="name").contactLabel Name 
+                                input#name(type="text" name="name")
+                            div.inputBox
+                                label(for="email").contactLabel Email
+                                input#email(type="text" name="email")
+
+                        div.areaBox
+                            label(for="message").contactLabel Message
+                            textarea#message(name="message", cols="30", rows="10")
+                        a(href="/comingsoon") 
+                            div.buttonBox
+                                button(type="submit" form="emailForm")#emailButton Submit
+                
+                
+

@@ -1,0 +1,25 @@
+extends layout
+
+block layoutContent
+
+    h1#comingSoonTitle This Page is Coming Soon
+    p#comingSoonSubtitle
+        span.siteLogo.textLogo Action Central 
+        | is a work in progress
+    div.flexContainer#profileFlex
+        div#joshImageBox
+            img(src="images/JoshSquare.jpg", alt="A Photo of a Red Headed Canadian")#joshProfileImage
+        div#profileInfoBox
+            h2 Contact the Developer
+            p Josh Devenyi
+            p 
+                a(href="mailto:joshdevenyi@gmail.com") joshdevenyi@gmail.com
+            p More work available at 
+                a#comingsoonLink(href="https://www.joshdev.ca") joshdev.ca
+            p.flexContainer 
+                a(href="https://www.linkedin.com/in/joshua-devenyi").joshIcon
+                    i.fab.fa-linkedin
+                a(href="https://github.com/JoshDevenyi").joshIcon
+
+                    i.fab.fa-github-square
+
