@@ -1,0 +1,92 @@
+block variables
+doctype html
+html
+
+    head
+        meta(charset="utf-8")
+        title #{title} | Action Central
+        link(rel="stylesheet", type="text/css", href="/css/sharedStyles.css")
+        link(rel="stylesheet", type="text/css", href="/css/indexStyles.css")
+        link(rel="stylesheet", type="text/css", href="/css/productStyles.css")
+        link(rel="stylesheet", type="text/css", href="/css/contactStyles.css")
+        script(src="https://kit.fontawesome.com/b536528e9f.js", crossorigin="anonymous")
+        meta(name="viewport", content="width=device-width")
+
+    body
+        header
+            div#headerMenuTop
+                div.flexContainer
+                    div#siteLogo
+                        div#logoBox
+                            h2#siteName
+                                a(href="/").siteLogo Action Central
+                            p Your Action Figure and Collectible Destination!
+
+                    div#search
+                        //- form#searchForm(action="#" name="search" method="get")
+                        div#searchFlex.flexContainer
+                            input(type="text")#searchBar
+                            a(href="/comingsoon")
+                                button(type="submit" form="searchForm")#searchButton
+                                    i.fas.fa-search
+
+            div#headerMenuBottom
+                div.flexContainer
+                    div#headerMenuLeft
+                        ul.menu
+                            li
+                                a(href="/comingsoon").headerLink Best Sellers
+                            li
+                                a(href="/comingsoon").headerLink Pre-Orders
+                            li
+                                a(href="/comingsoon").headerLink New Arrivals
+                            li
+                                a(href="/comingsoon").headerLink Sales
+                    div#headerMenuRight
+                        ul.menu
+                            li
+                                a(href="/comingsoon").headerLink
+                                    div.cartLink 
+                                        i.fas.fa-shopping-cart
+                                        p Cart
+                            li
+                                a(href="/contact").headerLink Contact Us
+                            li
+                                a(href="/comingsoon").headerLink Help
+
+        main#main
+            block layoutContent     
+
+        footer
+            div#footerTop
+                div.flexContainer
+                    div#copyrightBox
+                        div#copyrightText
+                            p.siteLogo#footerLogo Action Central
+                            p ©Joshfictional, Inc. 1993 - 2022
+                    div#socials
+                        ul.menu
+                            li.socialIcon
+                                a(href="comingsoon")
+                                    i.fab.fa-twitter
+                            li.socialIcon
+                                a(href="comingsoon")
+                                    i.fab.fa-facebook-f
+                            li.socialIcon
+                                a(href="comingsoon")
+                                    i.fab.fa-instagram
+                            li.socialIcon
+                                a(href="comingsoon")
+                                    i.fas.fa-envelope
+
+            div#footerBottom
+                ul#footerLinks.flexContainer
+                    li
+                        a(href="/comingsoon") Privacy Policy
+                    li
+                        a(href="/comingsoon") Terms and Conditions
+                    li
+                        a(href="/comingsoon") Shipping Rates
+                    li
+                        a(href="/comingsoon") FAQs
+            

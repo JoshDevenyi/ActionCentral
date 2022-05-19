@@ -1,0 +1,440 @@
+/* FONT IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
+
+
+/* GENERAL STYLES */
+html {
+
+    box-sizing: border-box;
+
+}
+
+body {
+
+    font-family: 'Titillium Web', sans-serif;
+
+}
+
+*, *::before, *::after {
+
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+
+}
+
+.flexContainer{
+
+    display: flex;
+    flex-flow: row wrap;
+
+}
+
+.menu li {
+
+    display: inline-block;
+    margin: 1em;
+
+}
+
+a{
+
+    text-decoration: none;
+
+}
+
+
+/* HEADER STYLES */
+#siteLogo{
+
+    flex: 1.35 0 0;
+
+}
+
+#logoBox{
+
+    margin: 1em 0 1em 2em ;
+    display: inline-block;
+    text-align: center;
+
+}
+
+.siteLogo{
+
+    font-family: 'Bangers', cursive;
+    text-decoration: none;
+    color:#023E7D;;
+
+}
+
+#siteName a{
+
+
+    font-size: 3em;
+
+}
+
+#search{
+
+    flex: 1 0 0;
+
+}
+
+#searchForm{
+
+    height: 100%;
+
+}
+
+#searchFlex{
+
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+
+#searchBar{
+
+    font-size: 16px;
+    width: 75%;
+    border: 2px solid #023E7D;
+    padding: .5em 0 .5em .25em;
+    border-top-left-radius:5px;
+    border-bottom-left-radius:5px;
+
+}
+
+#searchButton, #searchButton:active{
+
+    font-size: 16px;
+    background-color: #023E7D;
+    border: 2px solid #023E7D;
+    color:white;
+    padding: .5em;
+    border-top-right-radius:5px;
+    border-bottom-right-radius:5px;
+
+}
+
+#searchButton:hover
+{
+
+    background-color:#003166;
+
+} 
+
+#searchButton:active{
+
+    background-color:#002855;
+
+}
+
+#headerMenuBottom{
+
+    background-color: #023E7D;
+
+}
+
+#headerMenuLeft{
+
+    flex: 1.5 0 0;
+
+}
+
+#headerMenuRight{
+
+    flex: 1 0 0;
+    text-align: right;
+
+}
+
+.headerLink, .headerLink:visited{
+
+    color:white;
+    font-weight: 600;
+
+}
+
+.headerLink:hover, .headerLink:active{
+
+    color:#cccccc;
+
+}
+
+.cartLink i, .cartLink p{
+
+    display: inline-block;
+
+}
+
+
+/* PAGE-SPECIFIC HEADER STYLES */
+.pageHeader{
+
+    background-color: #002855;
+    color: white;
+    padding: 1em;
+
+}
+
+.pageHeader h1{
+
+    line-height: 1em;
+
+}
+
+
+/* FOOTER STYLES */
+footer{
+
+    background-color: #002855;
+    color: white;
+    padding: 1.25em;
+
+}
+
+footer a, footer a:visited{
+
+    color: white;
+
+}
+
+footer a:hover, footer a:active{
+
+    color:#cccccc;
+
+}
+
+#copyrightBox{
+    flex: 1 0 0;
+    align-self: center;
+}
+
+#footerLogo{
+    color: white;
+    font-size: 2.25em;
+}
+
+#copyrightText{
+    width: fit-content;
+    text-align: center;
+    font-weight: 200;
+}
+
+#copyrightText p:nth-child(2){
+
+    font-size: .75em;
+
+}
+
+#socials{
+
+    flex: 1 0 0;
+    text-align: right;
+    font-size: 2em;
+    align-self: center;
+
+}
+
+.menu .socialIcon{
+
+    margin: .15em 1em;
+
+}
+
+.socialIcon + .socialIcon{
+
+    margin-left: .25em;
+
+}
+
+#footerLinks{
+
+    margin-top: 1em;
+    justify-content: space-evenly;
+    text-decoration: none;
+    list-style-type: none;
+    font-weight: 200;
+
+}
+
+#footerLinks li a{
+
+    text-decoration: none;
+
+}
+
+
+/* MEDIA QUERIES */
+/* Set breakpoint a bit above 768px to better transition with page content */
+@media screen and (max-width: 784px ){
+
+
+    /* Header Changes */
+    #logoBox{
+        
+        margin-left: 0em;
+
+    }
+
+    #headerMenuTop .flexContainer{
+
+        flex-direction: column;
+
+    }
+
+    #socials{
+
+        margin-top: .5em;
+
+    }
+
+    #searchFlex{
+
+        flex-direction: row !important;
+        padding: 1em;
+
+    }
+
+    #siteLogo{
+
+        text-align: center;
+        
+    }
+
+    #headerMenuLeft{
+
+        display:none;
+
+    }
+
+
+    /* Footer Changes */
+    #footerTop .flexContainer{
+
+        flex-direction: column;
+
+    }
+
+}
+
+
+@media screen and (max-width: 500px ){
+
+    /* Footer Changes */
+    .socialIcon{
+
+        font-size: .85em;
+
+    }
+    
+
+    #footerLinks{
+
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+        #footerLinks li + li {
+
+        margin-top: 1em;
+
+    }
+
+}
+
+
+/* Coming Soon Page */
+
+#comingSoonTitle{
+
+    text-align: center;
+    margin: 2em 1em 1em 1em;
+    font-size: 2.25em;
+
+}
+
+#comingSoonSubtitle{
+
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 1.35em;
+    font-weight: bold;
+    
+}
+
+#profileInfoBox{
+    width: fit-content;
+    height: fit-content;
+    font-size: 1.25em;
+    margin: 0 1em 0 1em;
+}
+
+
+#profileInfoBox a, #profileInfoBox a:visited{
+
+    font-weight: bold;
+    color: #023E7D;
+
+}
+
+#profileInfoBox a:hover, #profileInfoBox a:active{
+    
+    color:#0353A4;
+
+} 
+
+#profileFlex{
+
+    align-items: center;
+    justify-content: space-around;
+    margin: 5em 0;
+}
+
+
+#joshImageBox{
+    max-width: 400px;
+    margin: 0 1em 1em 1em;
+}
+
+#joshProfileImage{
+
+    width: 100%;
+
+    border: 3px solid #023E7D;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+
+.textLogo{
+
+    font-size: 1.25em;
+
+}
+
+#profileInfoBox h2{
+
+    font-size: 1.35em;
+
+
+}
+
+
+#profileInfoBox p{
+    margin-top: .75em;
+    font-size: 1.15em;
+
+}
+
+.joshIcon{
+
+    font-size: 2.5em;
+
+}
+
+.joshIcon + .joshIcon{
+
+    margin-left: .5em;
+
+}

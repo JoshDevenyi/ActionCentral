@@ -1,0 +1,72 @@
+extends layout
+
+block layoutContent
+
+    div.pageHeader
+
+        h1#productPageTitle Marvel's Spider-Man (Spider-Punk Suit) 1/6 Scale Collectible Figure
+            
+        div#productCollections
+            p Collections: 
+            a(href="#") Hot Toys
+            a(href="#") Marvel
+
+    div.flexContainer#productContent
+
+        div#productLeftSide
+
+            div.flexContainer
+
+                div
+
+                    div#productDescription.productTextBox
+                        h2 Product Description
+                        p Meticulously crafted based on the Spider-Punk suit from the Marvel’s Spider-Man video game, this collectible figure features a newly developed masked head sculpt with a spike Mohawk and three pairs of interchangeable eye pieces to create different combinations of Spider-Man’s expressions; a newly developed body; a skillfully tailored Spider-Punk suit complete with greatly detailed patterns and denim vest with real-like pins and spikes; interchangeable hands for different postures; a guitar; Spider-Drone; a variety of web accessories; and a stylishly designed figure stand!
+                    
+                    div#productFeatures.productTextBox
+                        h3 Product Features
+                        ul
+                            li 11.80 inches (30cm)
+                            li Made of plastic
+                            li Based on Marvel’s Spider-Man game
+                            li A newly developed masked head sculpt with spike Mohawk
+                            li Newly developed body with over 30 points of articulations
+
+                    div#boxContents.productTextBox
+                        h3 Box Contents
+                        ul
+                            li Spider-Man figure
+                            li Newly developed white, red and blue colored Spider-Punk suit
+                            li Blue denim vest with real-like pins and spikes on the back
+                            li Pair of red and white sneakers
+                            li Spider web effect accessory
+                            li Spider-Drone
+
+
+        div#productRightSide
+            div.productPictureBox
+                img.productPicture(src="/images/punkspidermanaction.jpg", alt="Spiderman swinging holding a guitar")
+                //- Image Source: https://www.bigbadtoystore.com/Product/VariationDetails/79920
+
+            div.productDetails.flexContainer
+                p.price $234.99
+                p.inStock In Stock
+            
+            p.shipping Free Worldwide Shipping!
+
+            form(action="#" name="addToCart" method="post")#addToCartForm
+                div#cartFlex.flexContainer
+                    div#quantity
+                        label(for="quantity") Quantity
+                        input#quantity(type="number" min="1" max="10" name="quantity")
+                    button(type="submit" form="addToCartForm").cartSubmit  
+                        div.flexContainer    
+                            i.fas.fa-shopping-cart
+                            p Add To Cart    
+
+            form(action="#" name="addToWishlist" method="post")#addToWishlist
+                button(type="submit" form="addToWishlist").wishlistButton
+                    div.flexContainer
+                        i.fas.fa-star
+                        p Add to Wish List
+                        i.fas.fa-star
