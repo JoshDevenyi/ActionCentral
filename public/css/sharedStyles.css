@@ -6,12 +6,15 @@
 html {
 
     box-sizing: border-box;
-
+    max-width: 75em;
+    background-color: #0c243f;
+    margin: 0 auto;
 }
 
 body {
 
     font-family: 'Titillium Web', sans-serif;
+    background-color: white;
 
 }
 

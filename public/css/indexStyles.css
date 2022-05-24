@@ -9,13 +9,12 @@
 .bannerImage{
     width: 100%;
     margin: auto;
-  
     vertical-align: top;
 }
 
 .bannerText{
     color:white;
-    font-size: 5.5vw;
+    font-size: 4.5em;
     position: absolute;
     font-weight: bold;
     font-style: italic;
@@ -41,7 +40,7 @@
     padding: 0 20px;
     color: white;
     font-weight: bold;
-    font-size: 3vw;
+    font-size: 2.25em;
     border-radius: 0 3px 3px 0;
     user-select: none;
     transition: background-color 0.5s;
@@ -59,33 +58,40 @@
 
 /* SIDEBAR STYLES */
 #collections{
-    flex: 1 0 0;
+    flex: .5 0 0;
     text-align: center;
     background-color: #023E7D;
     padding-top: 1em;
     color: white;
+    width: 100%;
 }
 
 #collections h3{
-    font-size: 2em;
+    font-size: 1.5em;
     margin: 0 .25em;
+    margin-bottom: 1em;
+    margin-top: .32em;
 }
 
 #collectionList{
     flex-flow: column wrap;
     margin: 0 auto;
     width: 100%;
-    padding:0 1em;
-    justify-content: space-evenly;
-    height: 95.5%;
-    vertical-align: top;
-
+    padding: 0 1em;
+    justify-content: space-between;
+    height: 85%;   
 }
 
 .collectionLink{
     list-style-type: none;
-    margin-top: 1em;
     transition: transform .2s;
+    height: fit-content;   
+}
+
+.collectionLink img {
+
+    vertical-align: top;
+
 }
 
 .collectionLink:hover
@@ -94,27 +100,20 @@
     transform: scale(1.075);
 }
 
-.collectionLink+.collectionLink{
-    margin-top: 3em;
-}
 
 .collectionLogo{
-    max-width: 8em;
-    width: 100%;
+    width: 8em;
     border: 2px solid white;
 }
 
-
 #collectionListLink,#collectionListLink:visited {
-    color:#003166;
-    font-size: 1.05em;
-    padding: .5em;
+    font-size: 1.5em;
     font-weight: bold;
-    max-width: 128px;
-    margin: 0 auto;
-    border: 2px solid white;
+    text-decoration: none;
     background-color: white;
+    color: #003166;
     border-radius: 5px;
+    width: 5.35em;
 }
 
 #collectionListLink:hover, #collectionListLink:active {
@@ -123,32 +122,76 @@
 }
 
 
+
 /* FEATURED PRODUCT STYLES */
 #featured{
     flex: 5 0 0;
+    width: 100%;
+}
+
+#featuredContent{
+    background-color: white;
+    max-width:  85%;
+    margin: 0 auto;
+    
+}
+
+#topFeaturedProducts{
+    justify-content: space-between;
+    margin-bottom: 2em;
 }
 
 .featuredProducts{
-    justify-content: space-around;
-    max-width: 70em;
+    justify-content: space-between;
     margin: 0 auto;
 }
 
 #featured h2 {
     font-size: 2em;
-    padding: .5em 1em;
+    padding: .5em 0;
 }
 
+
+
 .productBox {
-    width: 20em;
-    padding: 1em;
+    margin-bottom: 2em;
 }
 
 .productLink{
     
     text-decoration: none;
-    color: black;
     margin: 1em 0;
+}
+
+.topProductImage{
+    display: block;
+    width: 413px;
+    margin: 0 auto;
+    border: 3px solid #023E7D;
+}
+
+
+
+.topProductName, .topProductName:visited {
+    margin: 0 auto;
+    padding: .5em;
+    width: 413px;
+    color: white;
+    background-color: #023E7D;
+    line-height: 1.5em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+.topProductPrice{
+    font-weight: bold;
+    width: 413px;
+    margin: 0 auto;
+    margin-top: .5em;
+    font-size: 1.2em;
+    display: none;
 }
 
 .productImage{
@@ -177,6 +220,7 @@
     margin: 0 auto;
     margin-top: .5em;
     font-size: 1.2em;
+    display: none;
 
 }
 
@@ -193,7 +237,7 @@
     text-decoration: none;
     background-color: #023E7D;
     color: white;
-    margin: 1em 1em 2em 1em;
+    margin: .25em auto 1.5em auto ;
     padding: .5em 1em;
     border-radius: 5px;
     transition: transform .2s;
@@ -209,27 +253,180 @@
 .productBottomButton:active{
     background-color:#002855;
 }
-  
+
+
+.topProductBox + .topProductBox{
+
+    margin-left: 1em;
+   
+}
 
 
 /* MEDIA QUERIES */
-
-/* Set breakpoint a bit above 768px to better transition with page content */
-
-
-@media screen and (max-width: 840px ){
-
-    /* TURNS OFF SIDEBAR */
-    #collections{
+@media screen and (max-width: 1200px ){
     
-        display: none;
+    /* Banner */
+
+    .bannerText{
+        font-size: 6.01vw;
+    }
     
+    .bannerPrev, .bannerNext{
+        font-size: 3vw;
     }
 
-    #featured h2 {
-        font-size: 2em;
-        padding: .5em 0;
+
+    /* Collection Bar */
+    #indexLayoutFlex{
+
+        flex-direction: column;
+
+    }
+
+    #collections h3{
+        display: none;
+    }
+
+    #featuredContent{
+        max-width: 59em;
+        padding: 0 2em;
+    }
+
+    #collections{
+
+        padding-top: 0;
+        color: white;
+
+    }
+
+    #collectionList{
+
+        flex-direction: row;
+        align-items: center;
+        padding: 1em 1em;
+    }
+
+    .collectionLink{
+        margin-top: 0;
+        vertical-align: bottom;    
+    }
+
+    .collectionLink +    .collectionLink{
+
+        margin-left: 1em;
+
+    }
+
+    .collectionLink:nth-child(6),  .collectionLink:nth-child(7),  .collectionLink:nth-child(8),  .collectionLink:nth-child(9){
+
+        display: none;
+
+    }
+   
+    
+}
+
+
+@media screen and (max-width: 980px ){
+
+    /* Collection Bar */
+
+    .collectionLink:nth-child(5){
+
+        display: none;
+
+    }
+
+    .collectionLink{
+        display: inline-block;
+        margin-left: 0;
+        width: 20%;
+    }
+
+    .collectionLink img{
+
+        width: 80%;
+
+    }
+
+    .collectionLink + .collectionLink{
+        margin-left: 0;
+    }
+
+    #collectionListLink{
+        margin: 0 auto;
+        width: auto;
+        max-width: 5.35em;
+        font-size: 2.5vw;
+    }
+
+
+   
+    /* Product Rework */
+
+
+    #featuredContent{
+        max-width: 40em;
+        padding: 0 2em;
+    }
+
+    #topFeaturedProducts{
+
+        flex-flow: column nowrap;
+
+    }
+
+    .topProductBox + .topProductBox{
+
+        margin-left: 0em;
+        margin-top: 2em;
+    }
+
+    .topProductBox{
+        height: 100%;
+        border: 1px solid black;    
+    }
+
+    .topProductImage{
+        width: 100%;
+
+    }
+
+    .topProductName{
+        width: 100%;
         text-align: center;
     }
+
+    /* Bottom Products */
+
+    .featuredProducts{
+        display: block;
+    }
+
+    .productBox{
+        border: 1px solid black;
+        width: fit-content;
+        display: inline-block;
+        white-space: nowrap;
+        width: 48%;
+    }
+
+
+    .productImage{
+        width: 100%;
+        margin: 0;
+    }
+
+    .productBox:nth-child(even){
+        float: right;
+    }
     
+    .productName, .productName:visited {
+        width: 100%;
+    }
+    
+    .productPrice{
+        width: 100%;
+    }
+
 }

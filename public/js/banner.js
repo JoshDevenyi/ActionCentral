@@ -27,10 +27,6 @@ function showSlides(n) {
     for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
     }
-
-    console.log(slides);
-    console.log(slideIndex);
-    console.log(slides[0]);
     slides[slideIndex-1].style.display = "block";
 }
 

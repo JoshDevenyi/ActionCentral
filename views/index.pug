@@ -2,142 +2,95 @@ extends layout
 
 block layoutContent
 
-    a(href="/product")
-        div#mainBanner
-            div#bannerSlides
+    
+    div#mainBanner
+        div#bannerSlides
+            a(href="/product/1")
                 div.bannerSlide
                     img.bannerImage(src="/images/PunkSpidermanBanner.png" alt="Punk Spiderman Swinging Through The City")
-                    //- Image Source: https://www.bigbadtoystore.com/Product/VariationDetails/79920
                     p.bannerText Now In Stock!
+            a(href="/product/4")
                 div.bannerSlide
-                    img.bannerImage(src="/images/NinjaTurtleBanner.png" alt="A Ninja Turtle in a Trench Coat pointing a ray gun")
-                    //- Image Source: https://www.bigbadtoystore.com/Product/VariationDetails/79920
-                    p.bannerText.soldOutText Sold Out
+                    img.bannerImage(src="/images/DarthVaderBanner.png" alt="Darth Vader holding his lightsaber and trying use the force on Luke Skywalker")
+                    p.bannerText Now In Stock!
+            a(href="/product/11")
                 div.bannerSlide
-                    img.bannerImage(src="/images/CloudBanner.png" alt="Cloud Strife from Final Fantasy 7 looking straight ahead")
-                    //- Image Source: https://www.bigbadtoystore.com/Product/VariationDetails/79920
-                    p.bannerText.soldOutText Sold Out
-                a(class="bannerPrev" onclick="plusSlides(-1)") &#10094;
-                a(class="bannerNext" onclick="plusSlides(1)") &#10095;
-                script(src="/js/banner.js") 
+                    img.bannerImage(src="/images/RocketRaccoonBanner.png" alt="Rocket Raccoon in a red scarf shooting two guns towards the left")
+                    p.bannerText Now In Stock!
+            a(class="bannerPrev" onclick="plusSlides(-1)") &#10094;
+            a(class="bannerNext" onclick="plusSlides(1)") &#10095;
+            script(src="/js/banner.js") 
 
-    div.flexContainer
+    div.flexContainer#indexLayoutFlex
 
         aside#collections
 
-            //- h3 Collections
+            h3 Collections
 
-            ul#collectionList
+            ul#collectionList.flexContainer
                 li.collectionLink
-                    a(href="#")
+                    a(href="/comingsoon")
                         img(src="/images/MarvelLogo.png" alt="The Marvel Comics Logo").collectionLogo
                         //- Image Source: https://upload.wikimedia.org/wikipedia/commons/b/b9/Marvel_Logo.svg
                 li.collectionLink
-                    a(href="#")
+                    a(href="/comingsoon")
                         img(src="/images/DCLogo.png" alt="The DC Comics Logo").collectionLogo
                         //- Image Source: https://subscriptions.acecomics.co.uk/tag/dc-comics/page/3/
                 li.collectionLink
-                    a(href="#")
+                    a(href="/comingsoon")
                         img(src="/images/StarWarsLogo.png" alt="The Star Wars Logo").collectionLogo
                         //- Image Source: https://en.wikipedia.org/wiki/File:Star_Wars_Logo.svg
                 li.collectionLink
-                    a(href="#")
+                    a(href="/comingsoon")
                         img(src="/images/TransformersLogo.png" alt="The Transformers Logo").collectionLogo
                         //- Image Source: https://www.stickpng.com/img/icons-logos-emojis/iconic-brands/transformers-logo-text-red
                 li.collectionLink
-                    a(href="#")
+                    a(href="/comingsoon")
                         img(src="/images/PowerRangersLogo.png" alt="The Power Rangers Logo").collectionLogo
                         //- Image Source: https://news.toyark.com/2018/05/01/hasbro-fully-acquires-power-rangers-press-release-298231
                 li.collectionLink
-                    a(href="#")
+                    a(href="/comingsoon")
                         img(src="/images/TMNTLogo.png" alt="The Teenage Mutant Ninja Turtles Logo").collectionLogo
                         //- Image Source: https://wallpapercave.com/w/wp8244190
                 li.collectionLink
-                    a(href="#")
-                        img(src="/images/NintendoLogo.png" alt="The Nintendo Logo").collectionLogo
+                    a(href="/comingsoon")
+                        img(src="/images/DisneyLogo.png" alt="The Disney Logo").collectionLogo
                         //- Image Source: https://logos-world.net/wp-content/uploads/2020/11/Nintendo-Logo.png
                 li.collectionLink
-                    a(href="#")
+                    a(href="/comingsoon")
+                        img(src="/images/NintendoLogo.png" alt="The Nintendo Logo").collectionLogo
+                        //- Image Source: https://static1.thegamerimages.com/wordpress/wp-content/uploads/2022/03/Disney-Logo.jpg?q=50&fit=contain&w=750&h=375&dpr=1.5
+                li.collectionLink
+                    a(href="/comingsoon")
                         img(src="/images/FinalFantasyLogo.png" alt="The Final Fantasy Logo").collectionLogo
                         //- Image Source: https://eu.finalfantasy.com/
                 li.collectionLink#collectionButton
                     a(href="/comingsoon")
-                        div#collectionListLink All Collections
+                       p#collectionListLink View All
 
 
         section#featured
-            h1(style="display:none;") Action Central Home Page
-            h2 Featured Products
-            div.featuredProducts.flexContainer
+            div#featuredContent
+                h1(style="display:none;") Action Central Home Page
+                h2 Featured Products
 
-                
-                div.productBox
-                    a(href="/product").productLink
-                        img.productImage(src="/images/PunkSpidermanPortrait.jpg" alt="Spiderman wearing a jean vest and holding a guitar")
-                        //- Image Source: https://www.bigbadtoystore.com/Product/VariationDetails/79920
-                        p.productName Marvel's Spider-Man (Spider-Punk Suit) 1/6 Scale Collectible Figure
-                        p.productPrice $234.99
+                div#topFeaturedProducts.flexContainer
+                    - for (var i = 0; i < 2; i++)
+                        div.topProductBox
+                            a(href=`/product/${products[i].id}`).productLink
+                                img.topProductImage(src=`${products[i].square_image}` alt=`${products[i].description}`)
+                                p.topProductName #{products[i].name}
 
-                
-                div.productBox
-                    a(href="#").productLink
-                        img.productImage(src="/images/OptimusPrime.jpg" alt="An Optimus Prime Toy")
-                        //- Image Source: https://www.bigbadtoystore.com/Product/VariationDetails/182048
-                        p.productName Transformers MDLX Articulated Figures Series Optimus Prime
-                        p.productPrice.soldOutText SOLD OUT
+                div.featuredProducts.flexContainer
+                    - for (var i = 2; i < products.length; i++)
+                        div.productBox
+                                a(href=`/product/${products[i].id}`).productLink
+                                    img.productImage(src= `${products[i].portrait_image}` alt= `${products[i].description}`)
+                                    p.productName #{products[i].name}
 
-                div.productBox
-                    a(href="#").productLink  
-                        img.productImage.soldOutImage(src="/images/DarthVader.png" alt="A Detailed Darth Vader Figure")
-                        //- Image Source: https://www.bigbadtoystore.com/Product/VariationDetails/26100
-                        p.productName Star Wars Darth Vader (Return of The Jedi) 1/6 Scale Figure
-                        p.productPrice.soldOutText SOLD OUT
+                div.bottomFeaturedProducts.flexContainer
+                    a(href="#").productBottomButton View All
 
-                div.productBox
-                    a(href="#").productLink
-                        img.productImage.soldOutImage(src="/images/RedRanger.png" alt="A Power Ranger Action Figure")
-                        //- Image Source: https://www.bigbadtoystore.com/Product/VariationDetails/181083
-                        p.productName Mighty Morphin Power Rangers Ultimates Red Ranger Figure
-                        p.productPrice.soldOutText SOLD OUT
-
-                div.productBox
-                    a(href="#").productLink
-                        img.productImage.soldOutImage(src="/images/Batman.png" alt="A Batman Statue")
-                        //- Image Source: https://www.bigbadtoystore.com/Product/VariationDetails/136895
-                        p.productName Batman ArtFX+ 1/6 Scale Statue
-                        p.productPrice.soldOutText SOLD OUT
-
-                div.productBox
-                    a(href="#").productLink
-                        img.productImage.soldOutImage(src="/images/Luigi.png" alt="A Statue of a Scared Luigi")
-                        //- Image Source: https://www.bigbadtoystore.com/Product/VariationDetails/105745
-                        p.productName Luigi's Mansion 3 Luigi Statue
-                        p.productPrice.soldOutText SOLD OUT
-
-                div.productBox
-                    a(href="#").productLink
-                        img.productImage.soldOutImage(src="/images/Wolverine.png" alt="Wolverine action figure in the snow")
-                        //- Image Source: https://www.bigbadtoystore.com/Product/VariationDetails/51058
-                        p.productName Marvel One:12 Collective Wolverine
-                        p.productPrice.soldOutText SOLD OUT
-
-                div.productBox
-                    a(href="#").productLink
-                        img.productImage.soldOutImage(src="/images/NinjaTurtle.png" alt="A Ninja Turtle in a Trench Coat")
-                        //- Image Source: https://www.bigbadtoystore.com/Product/VariationDetails/184583
-                        p.productName TMNT Ultimates Undercover Raphael
-                        p.productPrice.soldOutText SOLD OUT
-
-                div.productBox
-                    a(href="#").productLink
-                        img.productImage.soldOutImage(src="/images/Cloud.png" alt="A detailed figure of Cloud from Final Fantasy 7")
-                        //- Image Source: https://www.bigbadtoystore.com/Product/VariationDetails/123626
-                        p.productName Final Fantasy VII Remake Play Arts Kai Cloud Strife
-                        p.productPrice.soldOutText SOLD OUT
-
-            div.featuredProducts.flexContainer
-                a(href="#").productBottomButton View All
-                    
                     
                         
         
