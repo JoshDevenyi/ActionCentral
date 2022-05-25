@@ -48,6 +48,13 @@ app.get("/comingsoon", (req, res) => {
     
 });
 
+app.get("/list", (req, res) => {
+    
+  getAllProducts(res, "All Products", "list");
+  
+});
+
+
 
 //set up server listening
 app.listen(port, () => {
@@ -61,7 +68,7 @@ app.listen(port, () => {
 function getAllProducts(res, title, route){
     var pageData = {
       title: title,
-      products: null,  
+      products: null, 
     }
     axios(
       //Product list request

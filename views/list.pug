@@ -1,0 +1,22 @@
+extends layout
+
+block layoutContent
+
+    each p in products
+        a(href=href=`/product/${p.id}`)
+            div.listedProduct.flexContainer
+                img(src=`${p.square_image}`).listedImage
+                div.listedDetails
+                    p.listedName #{p.name}
+                    ul.listedCollections.flexContainer
+                        each c in p.collections
+                            a(href="/comingsoon").listedCollectionLink
+                                li.listedCollection #{c}
+                    p.listedPrice $#{p.price}
+                div.listedStock
+                    if p.Instock
+                        p.listedInStock In Stock
+                    else
+                        p Sold Out
+                
+                

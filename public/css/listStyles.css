@@ -1,0 +1,76 @@
+.listedProduct{
+    border-top: 1px solid #0061a7;
+    border-bottom: 1px solid #0061a7;
+    border-left: 7px solid #0061a7;
+    border-right: 1px solid #0061a7;
+    background-color: white;
+    list-style: none;
+    width: 80%;
+    margin: 2em auto;
+    flex: 1 0 0;
+    align-items: center;
+}
+
+.listedDetails{
+    margin: .75em 0;
+    flex: 10 0 0;
+}
+
+.listedProduct a {
+
+    height: fit-content;
+
+}
+
+.listedCollections{
+    margin: .5em 0;
+}
+
+.listedCollectionLink + .listedCollectionLink{
+
+    margin-left: .5em;
+
+}
+
+.listedCollectionLink, .listedCollectionLink:visited{
+    list-style: none;
+    font-weight: bold;
+    color:#2C94FC;
+    
+}
+
+.listedCollectionLink:hover, .listedCollectionLink:active{
+   text-decoration: underline;
+}
+
+.listedName{
+    color: black;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.listedImage{
+    width: 8em;
+    border: 3px solid #023E7D;
+    vertical-align: middle;
+    margin: .75em;
+}
+
+.listedStock{
+    flex: 3 0 0;
+    align-self: center;
+    text-align: center;
+}
+
+.listedInStock{
+    color: green;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.listedPrice{
+    
+    font-size: 1.15em;
+    font-weight: 500;
+
+}
